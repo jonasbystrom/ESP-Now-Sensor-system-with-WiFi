@@ -8,5 +8,5 @@ Soon to be added:
 - System overview sketches
 - Battery operation sketches (for sensors)
 
-Typical life time performance of a Sensor (LOLIN D1 Mini Pro and temp/humidity sensor) is 6 months using a 1200mAh LiPo battery and 12- months for a 2200mAh.
+Typical life time performance of a Sensor (LOLIN D1 Mini Pro V2.0.0 and temp/humidity sensor) is 6 months using a 1200mAh LiPo battery and 12- months for a 2200mAh.
 Using a small 55x80mm 5v solar panel and a TP4056 is enough for charging more than used, i.e. for a "continuous operation".
