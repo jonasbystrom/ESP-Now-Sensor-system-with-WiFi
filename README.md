@@ -1,4 +1,4 @@
-# ESP-Now-Sensor-system-with-WiFi-to-Internet
+# ESP-Now Sensor system with WiFi
 ESP-Now is used for battery operated low-power Sensors sending to a Gateway which also is connected with WiFi to the Internet (at the same time).
 Using ESP8266 and/or ESP32.
 
