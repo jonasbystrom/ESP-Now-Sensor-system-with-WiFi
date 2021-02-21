@@ -1,5 +1,6 @@
 # ESP-Now Sensor system with WiFi
 Low power battery operated Sensors based on ESP8266 or ESP32, sending sensor data using ESP-Now to an ESP Gateway which also is using WiFi and connected to the Internet (at the same time).
+
 Typical usage is battery and/or solar powered weather stations with a Blynk app for visual display. Using ESP-Now and low deep sleep current boards allows for 1 year battery operation. Adding even a very small solar panel enables continuous operation. All thanks to the fast and low power ESP-Now protocol.
 
 ## Soon to be added:
