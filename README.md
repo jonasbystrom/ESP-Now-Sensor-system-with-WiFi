@@ -1,9 +1,17 @@
 # ESP-Now Sensor system with WiFi
 Low power battery operated Sensors based on ESP8266 or ESP32, sending sensor data using ESP-Now to an ESP Gateway which also is using WiFi and connected to the Internet (at the same time).
 
-Typical usage is battery and/or solar powered weather stations with a Blynk app for visual display. Using ESP-Now and low deep sleep current boards allows for 1 year battery operation. Adding even a very small solar panel enables continuous operation. All thanks to the fast and low power ESP-Now protocol.
+## Why this?
+- Based on cheap ESP8266 (and ESP32) programmed in Arduino IDE
+- 1 year operation on 18650 battery
+- For-ever operation with a small solar panel (80x55mm)
+- ESP-Now receiver (gateway) connected to WiFi/Internet - at same time
+- Longer range than WiFi, no need for external antennas
 
-## Soon to be added:
+## Typical usage 
+Battery and/or solar powered weather stations connected to home automation, to Blynk apps, to Thingspeak, etc.
+
+## Soon to be added
 - Code template for sensor node (sending on ESP-NOW)
 - Code example for sensor using an SHT30 temp sensor
 - Code template for gateway (receiving on ESP-NOW and sending further via WiFi to the Internet, like Blynk, Thingspeak and MQTT.)
@@ -25,18 +33,18 @@ Best lifetime performance has been observed with the LOLIN SHT30 temp and humid 
 ![](https://github.com/jonasbystrom/ESP-Now-Sensor-system-with-WiFi/blob/main/img/esp-now-temp-sensor-with-solar-panel.png)
 
 
-## Life time:
+## Life time
 
 Typical life time performance of a Sensor (LOLIN D1 Mini Pro V2.0.0 and a SHT30 temp/humidity sensor) is 6 months using a 1200mAh LiPo battery and about 12 months for a Li-Ion 2200mAh.
 Using a small 80x55mm 5v solar panel and a TP4056 charger with a 1200 or 2200 mAh battery is well enough for "continuous operation".
 
-## Gateway summary:
+## Gateway summary
 
 A gateway receives the sensor data and can send further to any service on the Internet such as Blynk, Thingspeak or MQTT. Gateways are based on ESP8266 or ESP32 with small code changes in ESP-Now and WifI API's. The Gateway should have both ESP-Now and WiFi actived at same time and the ESP's can only manage this if they are on the same channel. And it does only seem work to for channel 1, due to some implementation limitation in the ESP's. This means the WiFi Router must be set to channel 1 on the 2.4GHz band. It can not operate on "auto channel", it has to be set to channel 1 fixed.
 
 By specification a Gateway can manage max 20 sending sensors on ESP-Now. It is fully possible to use several Gateways in parallel on the same channel if there is a need for more than 20 sensors. I have been running with 3 gateways at the same time without any collisions or problems.
 
-## System summary:
+## System summary
 
 A system comprise of up to 20 sensors and 1 gateway. Sensors send to the MAC-adress of the gateway. It is possible, and preferred, to use a software defined MAC-address in the gateway and not the default hardware MAC address. As this allows for an exchange of the gateway hardware without any problems. The ESP's support this.
 Each system should have it's own MAC address to avoid collisions with other systems.
