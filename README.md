@@ -4,23 +4,23 @@ Low power battery operated Sensors based on ESP8266 or ESP32, sending sensor dat
 Typical usage is battery and/or solar powered weather stations with a Blynk app for visual display. Using ESP-Now and low deep sleep current boards allows for 1 year battery operation. Adding even a very small solar panel enables continuous operation. All thanks to the fast and low power ESP-Now protocol.
 
 ## Soon to be added:
-- Code for sensor (sending on ESP-NOW)
-- Code for gateway (receiving on ESP-NOW and sending further via WiFi to the Internet, like Blynk, Thingspeak and MQTT.)
+- Code template for sensor node (sending on ESP-NOW)
+- Code example for sensor using an SHT30 temp sensor
+- Code template for gateway (receiving on ESP-NOW and sending further via WiFi to the Internet, like Blynk, Thingspeak and MQTT.)
 - System overview sketch
 - Battery operation sketches (for sensors)
 
-## Sensor summary:
+## Sensor description
 
-Sensor code is optimized for as low power usage as possible. Sensors operate in Deep Sleep mode and enables the WiFi module as late as possible just before sending the ESP-Now message. WiFi module is active less than 100 ms, more likely 50-70ms.
+Sensor code is optimized for lowest power consumption possible. Sensors operate in Deep Sleep mode in 5 minute cycles. The WiFi module is active less than 100 ms, more likely 50-70ms.
 
 My ESP-Now messages are "unnecessary" long as it would only require a few bytes to send sensor data. However, I have standardized on a more general and longer format as the extra time to transmit has low impact on energy consumption and battery lifetime.
 
-The energy consumption can be divided into 3 classes. 1. Deep Sleep period, 2. Wake time reading sensor, etc with WiFi off, 3. Sending data with WiFi on. With a deep sleep period of 5 mins between sensor readings and transmissions, it is the Deep Sleep period which is the major energy consumer for most standar ESP boards. Why it is very important to choose a board, or module, with as low deep sleep current as possible.
-D1 Mini Pro V2.0 is the best standard board I have tested. 
+The energy consumption can be divided into 3 classes. 1. Deep Sleep period (100-500uA or much more) 2. Wake time reading sensor etc with WiFi off (15-30mA), 3. Sending data with WiFi on (70-150mA). With a deep sleep period of 5 mins between sensor readings and transmissions, it is the Deep Sleep period which is the major energy consumer for most standard ESP boards. Why it is very important to choose a board, or module, with as low deep sleep current as possible. D1 Mini Pro V2.0 is the best standard board I have tested. 
 
 (I have a FireBeetle ESP8266 IoT under test and evaluation which looks promising. Building your own sensor with a naked ESP-module without USB drivers and LDO would lower the deep sleep current potential. It would also be possible to disable sensors by SW or HW during sleep, but I have only tested this very little and with no resulting battery lifetime improvements.)
 
-Best lifetime performance has been observed with LOLIN SHT30 temp and humid sensor, using a modified library driver. With DS18B20 temp sensor very close by. Then BME280, which consumes a bit more current which results in a bit shorter lifetime. DHT11, -21 and -22 all consumes more power (shorter battery lifetime) and also produce much more false readings and/or stops reading.
+Best lifetime performance has been observed with the LOLIN SHT30 temp and humid sensor, using a modified library driver. The DS18B20 temp sensor comes very close by. Then BME280, which consumes a bit more current with a noticeable shorter lifetime. DHT11, -21 and -22 all consumes more power with shorter battery lifetime and also produce much more false readings and/or stops reading, especially for outdoor use.
 
 ![](https://github.com/jonasbystrom/ESP-Now-Sensor-system-with-WiFi/blob/main/img/esp-now-temp-sensor-with-solar-panel.png)
 
