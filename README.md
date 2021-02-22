@@ -9,7 +9,7 @@ Low power battery operated Sensors based on ESP8266 or ESP32, sending sensor dat
 - Longer range than WiFi, no need for external antennas
 
 ## Typical usage 
-Battery and/or solar powered weather stations connected to home automation, to Blynk apps, to Thingspeak, etc.
+Battery and/or solar powered sensors and weather stations connected to home automations, to Blynk apps, to Thingspeak, MQTT, etc.
 
 ## Soon to be added
 - Code template for sensor node (sending on ESP-NOW)
