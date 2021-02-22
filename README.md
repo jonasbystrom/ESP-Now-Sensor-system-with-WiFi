@@ -24,7 +24,7 @@ While HW is standard ESP boards, the sensor code is optimized for lowest power c
 
 My ESP-Now messages are "unnecessary" long as it would only require a few bytes to send sensor data. However, I have standardized on a more general and longer format as the extra time to transmit has low impact on energy consumption and battery lifetime.
 
-The energy consumption can be divided into 3 classes. 1. Deep Sleep period (100-500uA or much more) 2. Wake time reading sensor etc with WiFi off (15-30mA), 3. Sending data with WiFi on (70-150mA). With a deep sleep period of 5 mins between sensor readings and transmissions, it is the Deep Sleep period which is the major energy consumer for most standard ESP boards. Why it is very important to choose a board, or module, with as low deep sleep current as possible. D1 Mini Pro V2.0 is the best standard board I have tested. 
+The energy consumption can be divided into 3 classes. 1. Deep Sleep period (50-500uA or much more) 2. Wake time reading sensor etc with WiFi off (15-30mA), 3. Sending data with WiFi on (70-150mA). With a deep sleep period of 5 mins between sensor readings and transmissions, it is the Deep Sleep period which is the major energy consumer for most standard ESP boards. Why it is very important to choose a board, or module, with as low deep sleep current as possible. D1 Mini Pro V2.0 is the best standard board I have tested. 
 
 (I have a FireBeetle ESP8266 IoT under test and evaluation which looks promising. Building your own sensor with a naked ESP-module without USB drivers and LDO would lower the deep sleep current potential. It would also be possible to disable sensors by SW or HW during sleep, but I have only tested this very little and with no resulting battery lifetime improvements.)
 
