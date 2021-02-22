@@ -24,11 +24,11 @@ While HW is standard ESP boards, the sensor code is optimized for lowest power c
 
 My ESP-Now messages are "unnecessary" long as it would only require a few bytes to send sensor data. However, I have standardized on a more general and longer format as the extra time to transmit has low impact on energy consumption and battery lifetime.
 
-The energy consumption can be divided into 3 classes. 1. Deep Sleep period (50-500uA or much more) 2. Wake time reading sensor etc with WiFi off (15-30mA), 3. Sending data with WiFi on (70-150mA). With a deep sleep period of 5 mins between sensor readings and transmissions, it is the Deep Sleep period which is the major energy consumer for most standard ESP boards. Why it is very important to choose a board, or module, with as low deep sleep current as possible. D1 Mini Pro V2.0 is the best standard board I have tested. 
+The energy consumption can be divided into 3 classes. 1. Deep Sleep period (50-300uA, or much more) 2. Wake time reading sensor etc with WiFi off (15-30mA), 3. Sending data with WiFi on (70-150mA). With a deep sleep period of 5 mins between sensor readings and transmissions, it is the Deep Sleep period which is the major energy consumer for the better ESP boards. It is therefore very important to use a board, or module, with as low deep sleep current as possible. D1 Mini Pro V2.0.0 is the best standard board I have tested. 
 
-(I have a FireBeetle ESP8266 IoT under test and evaluation which looks promising. Building your own sensor with a naked ESP-module without USB drivers and LDO would lower the deep sleep current potential. It would also be possible to disable sensors by SW or HW during sleep, but I have only tested this very little and with no resulting battery lifetime improvements.)
+_Note. I have a FireBeetle ESP8266 IoT Microcontroller board under test and evaluation which looks very promising with potentially longer battery performance. Other "HW-fixing" alternatives would be; using naked ESP modules with no USB and LDO chips, disabled LDO's on standard boards to provide your own more efficient LDO, etc. I have not tried much with such HW alternatives but that should reduce the deep sleep currents further for even longer battery life times._
 
-Best lifetime performance has been observed with the LOLIN SHT30 temp and humid sensor, using a modified library driver. The DS18B20 temp sensor comes very close by. Then BME280, which consumes a bit more current with a noticeable shorter lifetime. DHT11, -21 and -22 all consumes more power with shorter battery lifetime and also produce much more false readings and/or stops reading, especially for outdoor use.
+Best lifetime performance has been observed using a LOLIN SHT30 Temp and Humid sensor, using a modified driver library. The DS18B20 temp sensor comes very close by. The BME280, draws a bit more current with a noticeable shorter lifetime. DHT11, DHT21 and DHT22 all consumes more power with shorter battery lifetime and also produce much more false readings and/or stops reading, especially for outdoor use.
 
 ![](https://github.com/jonasbystrom/ESP-Now-Sensor-system-with-WiFi/blob/main/img/esp-now-temp-sensor-with-solar-panel.png)
 
@@ -36,7 +36,7 @@ Best lifetime performance has been observed with the LOLIN SHT30 temp and humid 
 ## Life time
 
 Typical life time performance of a Sensor with LOLIN D1 Mini Pro V2.0.0 and a SHT30 temp/humidity sensor:
-- 6 months using a 1200mAh LiPo battery
+- 6+ months using a 1200mAh LiPo battery
 - 12 months using a 2200mAh Li-Ion battery (not yet passed 12 months, but on its way)
 - Continuous operation using a small 80x55mm 5v solar panel and a TP4056 charger with a 1200 or 2200 mAh battery.
 
