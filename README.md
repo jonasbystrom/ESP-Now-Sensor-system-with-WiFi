@@ -2,7 +2,7 @@
 Low power battery operated Sensors based on ESP8266 or ESP32, sending sensor data wireless using ESP-Now to an ESP8266/-32 Gateway connected to the Internet using WiFi (at the same time).
 
 ## Why this?
-- Based on cheap ESP8266 (and ESP32) programmed in Arduino IDE
+- Based on cheap standard ESP8266 (and ESP32) boards programmed in Arduino IDE
 - 1 year operation on 18650 battery
 - For-ever operation with a small solar panel (80x55mm)
 - ESP-Now receiver (gateway) connected to WiFi/Internet - at same time
