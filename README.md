@@ -35,8 +35,10 @@ Best lifetime performance has been observed with the LOLIN SHT30 temp and humid 
 
 ## Life time
 
-Typical life time performance of a Sensor (LOLIN D1 Mini Pro V2.0.0 and a SHT30 temp/humidity sensor) is 6 months using a 1200mAh LiPo battery and about 12 months for a Li-Ion 2200mAh.
-Using a small 80x55mm 5v solar panel and a TP4056 charger with a 1200 or 2200 mAh battery is well enough for "continuous operation".
+Typical life time performance of a Sensor with LOLIN D1 Mini Pro V2.0.0 and a SHT30 temp/humidity sensor:
+- 6 months using a 1200mAh LiPo battery
+- 12 months using a 2200mAh Li-Ion battery (not yet passed 12 months, but on its way)
+- Continuous operation using a small 80x55mm 5v solar panel and a TP4056 charger with a 1200 or 2200 mAh battery.
 
 ## Gateway summary
 
