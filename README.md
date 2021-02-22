@@ -20,7 +20,7 @@ Battery and/or solar powered sensors and weather stations connected to home auto
 
 ## Sensor description
 
-While HW is standard ESP boards, the sensor code is optimized for lowest power consumption possible. Sensors operate in Deep Sleep mode in 5 minute cycles. The WiFi module is active less than 100 ms, more likely 50-70ms.
+While HW is standard ESP boards, the sensor code is optimized for lowest power consumption possible. Sensors operate in Deep Sleep mode in 5 minute cycles. The WiFi module is active less than 100 ms, more likely in the range of 50 ms.
 
 My ESP-Now messages are "unnecessary" long as it would only require a few bytes to send sensor data. However, I have standardized on a more general and longer format as the extra time to transmit has low impact on energy consumption and battery lifetime.
 
