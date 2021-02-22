@@ -1,5 +1,5 @@
 # ESP-Now Sensor system with WiFi
-Low power battery operated Sensors based on ESP8266 or ESP32, sending sensor data using ESP-Now to an ESP Gateway which also is using WiFi and connected to the Internet (at the same time).
+Low power battery operated Sensors based on ESP8266 or ESP32, sending sensor data wireless using ESP-Now to an ESP Gateway connected to the Internet using WiFi (at the same time).
 
 ## Why this?
 - Based on cheap ESP8266 (and ESP32) programmed in Arduino IDE
