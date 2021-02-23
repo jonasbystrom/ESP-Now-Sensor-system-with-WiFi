@@ -20,15 +20,22 @@ Battery and/or solar powered sensors and weather stations connected to home auto
 
 ## Sensor description
 
-While HW is standard ESP boards, the sensor code is optimized for lowest power consumption possible. Sensors operate in Deep Sleep mode in 5 minute cycles. The WiFi module is active less than 100 ms, more likely in the range of 50 ms.
+While HW is standard ESP boards, the sensor code is optimized for lowest power consumption possible. Sensors operate in Deep Sleep mode in 5 minute cycles. The WiFi module is active in the region of 60 ms.
 
-My ESP-Now messages are "unnecessary" long as it would only require a few bytes to send sensor data. However, I have standardized on a more general and longer format as the extra time to transmit has low impact on energy consumption and battery lifetime.
+The ESP-Now messages are "unnecessary" long and not just a few bytes as it would take to send sensor data. However, I have standardized on a more general and longer format as the extra time to transmit has quite a low impact on energy consumption and battery lifetime.
 
-The energy consumption can be divided into 3 classes. 1. Deep Sleep period (50-300uA, or much more) 2. Wake time reading sensor etc with WiFi off (15-30mA), 3. Sending data with WiFi on (70-150mA). With a deep sleep period of 5 mins between sensor readings and transmissions, it is the Deep Sleep period which is the major energy consumer for the better ESP boards. It is therefore very important to use a board, or module, with as low deep sleep current as possible. D1 Mini Pro V2.0.0 is the best standard board I have tested. 
+The energy consumption can be divided into 3 classes:
+1. Deep Sleep period: 300 secs, 50-200uA. Some boards draw much more in deep sleep. 
+2. Wake time reading sensor etc with WiFi OFF: 100-500ms, 15-30mA. Fast sensors are preferred. 
+3. Wake time sending data with WiFi ON: 60ms, 70-150mA. 
 
-_Note. I have a FireBeetle ESP8266 IoT Microcontroller board under test and evaluation which looks very promising with potentially longer battery performance. Other "HW-fixing" alternatives would be; using naked ESP modules with no USB and LDO chips, disabled LDO's on standard boards to provide your own more efficient LDO, etc. I have not tried much with such HW alternatives but that should reduce the deep sleep currents further for even longer battery life times._
+From the above typical values, it is realized the major energy consumption is in the Deep Sleep mode why it is important to use ESP boards with low deep sleep currents. The LOLIN D1 Mini Pro V2.0.0 is the standard ESP board with the longest battery lifetime I have tested.
 
-Best lifetime performance has been observed using a LOLIN SHT30 Temp and Humid sensor, using a modified driver library. The DS18B20 temp sensor comes very close by. The BME280, draws a bit more current with a noticeable shorter lifetime. DHT11, DHT21 and DHT22 all consumes more power with shorter battery lifetime and also produce much more false readings and/or stops reading, especially for outdoor use.
+Best sensor lifetime performance has been observed using a LOLIN SHT30 Temp and Humid sensor, with a modified driver library. The DS18B20 temp sensor comes very close by. The BME280, draws a bit more current with a noticeable shorter lifetime. DHT11, DHT21 and DHT22 all consume more power, either by higher standby current or by longer reading times, resulting in shorter battery lifetime. They also produce much more false readings and easily gets over-saturated in humid outdoors conditions.
+
+_Note 1. I have a FireBeetle ESP8266 IoT Microcontroller board under test which looks very promising with potentially even longer battery performance._
+
+_Note 2. It would be further possible to reduce the deep sleep current by using ESP modules with no USB and LDO chips, or by disabling built-in LDO's replacing with more efficient external ones, etc. However, i haven't tried this very much but instead focused on an optimal SW solution using standard boards._
 
 ![](https://github.com/jonasbystrom/ESP-Now-Sensor-system-with-WiFi/blob/main/img/esp-now-temp-sensor-with-solar-panel.png)
 
