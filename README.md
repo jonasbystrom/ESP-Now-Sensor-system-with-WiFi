@@ -18,6 +18,15 @@ Battery and/or solar powered sensors and weather stations connected to home auto
 - System overview sketch
 - Battery operation sketches (for sensors)
 
+
+## Life time
+
+Typical life time performance of a Sensor with LOLIN D1 Mini Pro V2.0.0 and a SHT30 temp/humidity sensor:
+- 6+ months using a 1200mAh LiPo battery
+- 12 months using a 2200mAh Li-Ion battery (not yet passed 12 months, but on its way)
+- Continuous operation using a small 80x55mm 5v solar panel and a TP4056 charger with a 1200 or 2200 mAh battery.
+
+
 ## Sensor description
 
 While HW is standard ESP boards, the sensor code is optimized for lowest power consumption possible. Sensors operate in Deep Sleep mode in 5 minute cycles. The WiFi module is active in the region of 60 ms.
@@ -39,13 +48,6 @@ _Note 2. It would be further possible to reduce the deep sleep current by using 
 
 ![](https://github.com/jonasbystrom/ESP-Now-Sensor-system-with-WiFi/blob/main/img/esp-now-temp-sensor-with-solar-panel.png)
 
-
-## Life time
-
-Typical life time performance of a Sensor with LOLIN D1 Mini Pro V2.0.0 and a SHT30 temp/humidity sensor:
-- 6+ months using a 1200mAh LiPo battery
-- 12 months using a 2200mAh Li-Ion battery (not yet passed 12 months, but on its way)
-- Continuous operation using a small 80x55mm 5v solar panel and a TP4056 charger with a 1200 or 2200 mAh battery.
 
 ## Gateway summary
 
