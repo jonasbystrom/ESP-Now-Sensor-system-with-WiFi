@@ -59,8 +59,17 @@ By specification a Gateway can manage max 20 sending sensors on ESP-Now. It is f
 
 ## System summary
 
-A system comprise of up to 20 sensors and 1 gateway. Sensors send to the MAC-adress of the gateway. It is possible, and preferred, to use a software defined MAC-address in the gateway and not the default hardware MAC address. As this allows for an exchange of the gateway hardware without any problems. The ESP's support this.
-Each system should have it's own MAC address to avoid collisions with other systems.
-It is said ESP-Now has "3 times longer access range" than WiFi. I have never tested this but I have noted long enough access range for my sensors in my installations. The communication stability is very good. I have never experienced any communication losses in all normal cases. I havent tested this very much but i typically get 99 or 100 sucessful transmissions out of 100 tries.  
+A system comprise of up to 20 low power sensors and 1 gateway. Each sensor sends a unicast message every 5 minutes to the MAC-adress of the gateway. The gateway receives the messages and can process and send further over WiFi to any local or Internet service. The gateway can receive messages from sensors (on ESP-Now) and communicate over WiFi at the same time without any missed communications. Gateway connected to Blynk to display and monitor sensors is a good example which works very well.
+
+A restriction is that the gateway must use the same WiFi channel on ESP-Now and WiFi. And due to some limitations in the ESP WiFi implementation, this only works on channel 1. (I have read articles saying it should be possible on also other channels, but I have only succeeded on channel 1.) This means the WiFi router must be set to channel 1 on the 2.4GHz band. It cannot be operated on "automatic channel".
+
+There are some tricks involved during WiFi inits to get this working properly. See source code. (Maybe there are other tricks required to operate on any other channel than 1.)
+
+It is possible, and preferred, to use a software defined MAC-address in the gateway instead of the default hardware MAC address. This allows for a replacement of the gateway hardware without any problems.
+
+It is possible to run several systems in paralell. Just use a unique MAC address for each system. I am running 3 separate systems without any problems.
+
+It is said ESP-Now has "3 times longer access range" than WiFi. I've never done any measurements, but I have noted long enough access range for my sensors in my installations.
+
 
 _Note. ESP-Now specification defines max 20 "peers" which is what i understand is "units to send to". A sensor in my system, sends to one (1) slave/gateway. However, there is no specification, what I know about, stating from how many controllers/sensors a slave/gateway can receive from. Maybe this number is larger than 20, and therefore would be possible to use more than 20 sensors per gateway. I have not tested this._
