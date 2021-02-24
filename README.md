@@ -53,9 +53,10 @@ _Note 2. It would be further possible to reduce the deep sleep current by using 
 
 ## Gateway summary
 
-A gateway receives the sensor data and can send further to any service on the Internet such as Blynk, Thingspeak or MQTT. Gateways are based on ESP8266 or ESP32 with small code changes in ESP-Now and WifI API's. The Gateway should have both ESP-Now and WiFi actived at same time and the ESP's can only manage this if they are on the same channel. And it does only seem work to for channel 1, due to some implementation limitation in the ESP's. This means the WiFi Router must be set to channel 1 on the 2.4GHz band. It can not operate on "auto channel", it has to be set to channel 1 fixed.
+A gateway is a slave in ESP-Now terminology and receives sensor data sent to its MAC address. It can be implemented on ESP8266 or ESP32 with a minor code difference in the ESP-Now and WiFi API's.
 
-By specification a Gateway can manage max 20 sending sensors on ESP-Now. It is fully possible to use several Gateways in parallel on the same channel if there is a need for more than 20 sensors. I have been running with 3 gateways at the same time without any collisions or problems.
+WiFi and ESP-Now can be activated and operating at the same time. This allows one MCU to send the sensor data further using WiFi. This seems not to be commonly known. And is a bit tricky to get working. See source code how to.
+
 
 ## System summary
 
