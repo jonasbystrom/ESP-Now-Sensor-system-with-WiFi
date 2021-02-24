@@ -29,13 +29,15 @@ Typical life time performance of a Sensor with LOLIN D1 Mini Pro V2.0.0 and a SH
 
 ## Sensor description
 
-While HW is standard ESP boards, the sensor code is optimized for lowest power consumption possible. Sensors operate in Deep Sleep mode in 5 minute cycles. The WiFi module is active in the region of 60 ms.
+While HW is standard ESP boards, the sensor code is optimized for lowest power consumption possible. Sensors operate in Deep Sleep mode in 5 minute cycles. The WiFi module is active in the region of 60 ms per cycle.
 
-The ESP-Now messages are "unnecessary" long and not just a few bytes as it would take to send sensor data. However, I have standardized on a more general and longer format as the extra time to transmit has quite a low impact on energy consumption and battery lifetime.
+The ESP-Now messages are "unnecessary" long and not just a few bytes as would be enough to send sensor data. However, I have standardized on a more general and longer format as the extra time to transmit a larger payload has quite a low impact on energy consumption and battery lifetime.
 
 The energy consumption can be divided into 3 classes:
-1. Deep Sleep period: 300 secs, 50-200uA. Some boards draw much more in deep sleep. 
-2. Wake time reading sensor etc with WiFi OFF: 100-500ms, 15-30mA. Fast sensors are preferred. 
+1. Deep Sleep period: 300 secs, 50-200uA. 
+_Note. Some boards draw much more in deep sleep._
+2. Wake time reading sensor etc with WiFi OFF: 100-500ms, 15-30mA. 
+_Fast sensors are preferred._
 3. Wake time sending data with WiFi ON: 60ms, 70-150mA. 
 
 From the above typical values, it is realized the major energy consumption is in the Deep Sleep mode why it is important to use ESP boards with low deep sleep currents. The LOLIN D1 Mini Pro V2.0.0 is the standard ESP board with the longest battery lifetime I have tested.
