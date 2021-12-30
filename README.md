@@ -16,7 +16,7 @@ Battery and/or solar powered sensors and weather stations connected to home auto
 - Code template/demonstrator for ESP8266 Gateway (receiving on ESP-NOW and providing a simple web server over WiFi),
 
 ## Later to be added
-- Code templates for ESP32. (Small #defien addosn to the existing code)
+- Code templates for ESP32. (Small #define addons to the existing code)
 - System overview sketch
 - Possble battery life time data & graphs
 
