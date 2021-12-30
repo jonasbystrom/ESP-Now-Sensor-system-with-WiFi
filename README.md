@@ -11,20 +11,22 @@ Low power battery operated Sensors based on ESP8266 or ESP32, sending sensor dat
 ## Typical usage 
 Battery and/or solar powered sensors and weather stations connected to home automations, to Blynk apps, to Thingspeak, MQTT, etc.
 
-## Soon to be added
-- Code template for sensor node (sending on ESP-NOW)
-- Code example for sensor using an SHT30 temp sensor
-- Code template for gateway (receiving on ESP-NOW and sending further via WiFi to the Internet, like Blynk, Thingspeak and MQTT.)
-- System overview sketch
-- Battery operation sketches (for sensors)
+## Code available
+- Code template/demonstrator for ESP8266 Sensor node (sending on ESP-NOW)
+- Code template/demonstrator for ESP8266 Gateway (receiving on ESP-NOW and providing a simple web server over WiFi),
 
+## Later to be added
+- Code templates for ESP32. (Small #defien addosn to the existing code)
+- System overview sketch
+- Possble battery life time data & graphs
 
 ## Life time
-
 Typical life time performance of a Sensor with LOLIN D1 Mini Pro V2.0.0 and a SHT30 temp/humidity sensor:
-- 6+ months using a 1200mAh LiPo battery
-- 12 months using a 2200mAh Li-Ion battery (not yet passed 12 months, but on its way)
+- 6+ months using a 1200mAh LiPo battery and SHT30 temp and humid sensor
+- 12+ months using a 2200mAh Li-Ion battery amd SHT30
+- 12+ months using a 1200mAh LiPo battery and DS18B20 temp sensor
 - Continuous operation using a small 80x55mm 5v solar panel and a TP4056 charger with a 1200 or 2200 mAh battery.
+- "Almost" continuous operation with a 45x45 5v solar panel, TP4056 and a small 500 mAh battery.  
 
 
 ## Sensor description
