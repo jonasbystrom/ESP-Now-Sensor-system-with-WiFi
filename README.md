@@ -12,11 +12,11 @@ Low power battery operated Sensors based on ESP8266 or ESP32, sending sensor dat
 Battery and/or solar powered sensors and weather stations connected to home automations, to Blynk apps, to Thingspeak, MQTT, etc. Or just for longer/safer reach and communication.
 
 ## Code available
-- Code template/demonstrator for ESP8266 Sensor node (sending on ESP-NOW)
+- Code template/demonstrator for ESP8266 and ESP32 Sensor node (sending on ESP-NOW)
 - Code template/demonstrator for ESP8266 Gateway (receiving on ESP-NOW and providing a simple web server over WiFi),
 
 ## Later to be added
-- Code templates for ESP32. (Small #define addons to the existing code.)
+- Code template Gateway to be updated for ESP32. (Small #define addons to the existing code.)
 - System overview sketch
 - Possble battery life time data & graphs
 
