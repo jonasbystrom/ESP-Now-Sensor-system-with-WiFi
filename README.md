@@ -25,16 +25,16 @@ Typical life time performance of a Sensor with ESP8266 LOLIN D1 Mini Pro V2.0.0 
 - 6+ months using a 1200mAh LiPo battery and SHT30 temp and humid sensor
 - 12+ months using a 2200mAh Li-Ion battery and SHT30
    
-   See graph. (Started 1+ month before start of graph. Still alive) https://raw.githubusercontent.com/jonasbystrom/ESP-Now-Sensor-system-with-WiFi/main/img/batlife_d1minipro_sht30_2200mah.png
+   _See graph. (Started 1+ month before start of graph. Still alive) https://raw.githubusercontent.com/jonasbystrom/ESP-Now-Sensor-system-with-WiFi/main/img/batlife_d1minipro_sht30_2200mah.png_
 
 - 12+ months using a 1200mAh LiPo battery and DS18B20 temp sensor
 
-   See graph. (Started 1+ month before start of graph. Dead at end.) https://github.com/jonasbystrom/ESP-Now-Sensor-system-with-WiFi/blob/main/img/batlife_d1minipro_ds18b20_1200mah.png
+   _See graph. (Started 1+ month before start of graph. Dead at end.) https://github.com/jonasbystrom/ESP-Now-Sensor-system-with-WiFi/blob/main/img/batlife_d1minipro_ds18b20_1200mah.png_
    
 - Continuous operation using a small 80x55mm 5v solar panel and a TP4056 charger with a 1200 or 2200 mAh battery.
 - "Almost" continuous operation with a 45x45mm 5v solar panel, TP4056 and a small 500 mAh battery.  
 
-   See graph. Some voltage drops are "problems" with humidity (i think). Anyway, it shows as small as 45x45mm solar panel and a small battery of 500 mAh is enough, even in dark winter time in Swden (!). https://github.com/jonasbystrom/ESP-Now-Sensor-system-with-WiFi/blob/main/img/batlife_d1minipro_sht30_45x45mm_solar_500mah.png
+   _See graph. Some voltage drops are "problems" with humidity (i think). Anyway, it shows as small as 45x45mm solar panel and a small battery of 500 mAh is enough, even in dark winter time in Swden (!). https://github.com/jonasbystrom/ESP-Now-Sensor-system-with-WiFi/blob/main/img/batlife_d1minipro_sht30_45x45mm_solar_500mah.png_
 
 
 ## Sensor description
