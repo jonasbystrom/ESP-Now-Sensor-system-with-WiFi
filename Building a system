@@ -1,8 +1,0 @@
-## Building a system
-To build a functional system, you'll need the following:
-- Program 1 ESP8266 or ESP32 with the code located in espnow_gateway
-- Program 1 eSP8266 or ESP32 with the code located in espnow_sensor.
-- HW for sensor.
--- Connect RTS to D1  (to be able to wake up from deep sleepfor deep sleep to obe able to wake up
-You can run this unit on USB-5v or a battery. If using a battery you can alos  230V (mains) shouls also  the Set ing syste
-- 
