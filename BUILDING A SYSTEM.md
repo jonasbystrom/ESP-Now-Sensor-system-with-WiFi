@@ -28,4 +28,4 @@ You can follow these steps to build a working system.
 
 ## Router
 - Set the 2.4GHz band of your router to "fixed" channel 1
-  - _I personaly use a separate Router defining a sepatate WiFi network (SSID) which works fixed on channel 1._
+  - _I personally use a separate Router defining a sepatate WiFi network (SSID) which works fixed on channel 1._
