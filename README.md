@@ -18,7 +18,6 @@ Low power battery operated Sensors based on ESP8266 or ESP32, sending sensor dat
 
 ## Later to be added
 - System overview sketch
-- Possble battery life time data & graphs
 
 ## Life time
 Typical life time performance of a Sensor with ESP8266 LOLIN D1 Mini Pro V2.0.0 and temp sensor:
