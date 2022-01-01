@@ -29,7 +29,7 @@ Typical life time performance of a Sensor with ESP8266 LOLIN D1 Mini Pro V2.0.0 
 
 - 12+ months using a 1200mAh LiPo battery and DS18B20 temp sensor
 
-   _See graph. (Started 1+ month before start of graph. Dead at end.) https://github.com/jonasbystrom/ESP-Now-Sensor-system-with-WiFi/blob/main/img/batlife_d1minipro_ds18b20_1200mah.png_
+   _See graph. (Started 1+ month before start of graph. Dead at end.) https://raw.githubusercontent.com/jonasbystrom/ESP-Now-Sensor-system-with-WiFi/blob/main/img/batlife_d1minipro_ds18b20_1200mah.png_
    
 - Continuous operation using a small 80x55mm 5v solar panel and a TP4056 charger with a 1200 or 2200 mAh battery.
 - "Almost" continuous operation with a 45x45mm 5v solar panel, TP4056 and a small 500 mAh battery.  
