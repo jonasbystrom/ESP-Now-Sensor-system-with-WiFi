@@ -34,7 +34,7 @@ Typical life time performance of a Sensor with ESP8266 LOLIN D1 Mini Pro V2.0.0 
 - Continuous operation using a small 80x55mm 5v solar panel and a TP4056 charger with a 1200 or 2200 mAh battery.
 - "Almost" continuous operation with a 45x45mm 5v solar panel, TP4056 and a small 500 mAh battery.  
 
-   _See graph. Some voltage drops are "problems" with humidity (i think). Anyway, it shows as small as 45x45mm solar panel and a small battery of 500 mAh is enough, even in dark winter time in Swden (!). https://github.com/jonasbystrom/ESP-Now-Sensor-system-with-WiFi/blob/main/img/batlife_d1minipro_sht30_45x45mm_solar_500mah.png_
+   _See graph. Some voltage drops are "problems" with humidity (i think). Anyway, it shows as small as 45x45mm solar panel and a small battery of 500 mAh is enough, even in dark winter time in Swden (!). https://raw.githubusercontent.com/jonasbystrom/ESP-Now-Sensor-system-with-WiFi/main/img/batlife_d1minipro_sht30_45x45mm_solar_500mah.png_
 
 
 ## Sensor description
