@@ -2,6 +2,10 @@
 ## Building a system
 You can follow these steps to build a working system.
 
+## Router
+- Set the 2.4GHz band of your router to "fixed" channel 1
+  - _I personally use a separate Router defining a sepatate WiFi network (SSID) which works fixed on channel 1._
+
 ## Sensor
 - Program 1 (or more) ESP8266 or ESP32 with the sketch in espnow_sensor. Use ARDUINO IDE.
   - Remember to set the appropriate #define USE_ESP8266 or USE_ESP32.
@@ -25,7 +29,3 @@ You can follow these steps to build a working system.
   - Remember to set the appropriate #define USE_ESP8266 or USE_ESP32.
 - The ESP should normally run on USB 5V.
 - No HW modifications needed.
-
-## Router
-- Set the 2.4GHz band of your router to "fixed" channel 1
-  - _I personally use a separate Router defining a sepatate WiFi network (SSID) which works fixed on channel 1._
