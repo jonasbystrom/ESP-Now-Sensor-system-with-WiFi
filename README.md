@@ -3,27 +3,27 @@ Low power battery operated Sensors based on ESP8266 or ESP32, sending sensor dat
 
 ## Why this?
 - Based on cheap standard ESP8266 (and ESP32) boards programmed in Arduino IDE
-- 1 year operation on 18650 battery
+- 1+ year operation on 18650 battery
 - For-ever operation with a small solar panel (80x55mm)
 - ESP-Now receiver (gateway) connected to WiFi/Internet - at same time
 - Longer range than WiFi, no need for external antennas
 
 ## Typical usage 
-Battery and/or solar powered sensors and weather stations connected to home automations, to Blynk apps, to Thingspeak, MQTT, etc. Or just for longer/safer reach and communication.
+- Battery and/or solar powered sensors and weather stations connected to home automations, to Blynk apps, to Thingspeak, MQTT, etc. 
+- Longer/safer reach and communication vs WiFi.
 
 ## Code available
 - Code template/demonstrator for ESP8266 and ESP32 Sensor node (sending on ESP-NOW)
-- Code template/demonstrator for ESP8266 Gateway (receiving on ESP-NOW and providing a simple web server over WiFi),
+- Code template/demonstrator for ESP8266 and ESP32 Gateway (receiving on ESP-NOW and providing a simple web server over WiFi),
 
 ## Later to be added
-- Code template Gateway to be updated for ESP32. (Small #define addons to the existing code.)
 - System overview sketch
 - Possble battery life time data & graphs
 
 ## Life time
-Typical life time performance of a Sensor with LOLIN D1 Mini Pro V2.0.0 and a SHT30 temp/humidity sensor:
+Typical life time performance of a Sensor with ESP8266 LOLIN D1 Mini Pro V2.0.0 and temp sensor:
 - 6+ months using a 1200mAh LiPo battery and SHT30 temp and humid sensor
-- 12+ months using a 2200mAh Li-Ion battery amd SHT30
+- 12+ months using a 2200mAh Li-Ion battery and SHT30
 - 12+ months using a 1200mAh LiPo battery and DS18B20 temp sensor
 - Continuous operation using a small 80x55mm 5v solar panel and a TP4056 charger with a 1200 or 2200 mAh battery.
 - "Almost" continuous operation with a 45x45 5v solar panel, TP4056 and a small 500 mAh battery.  
@@ -36,11 +36,16 @@ The ESP-Now messages are "unnecessary" long and not just a few bytes as would be
 
 The energy consumption can be divided into 3 classes:
 1. Deep Sleep period: 300 secs, 50-200uA. 
-_Note. Some boards draw much more this in deep sleep._
-2. Wake time reading sensor etc with WiFi OFF: 100-500ms, 15-30mA. 
-_Fast sensors are preferred._
-3. Wake time sending data with WiFi ON: 60ms, 70-150mA. 
-_Thanks to ESP-Now._
+ 
+   _Note. Some boards draw much more than this in deep sleep._
+
+2. Wake time, reading sensors and battery levels etc with WiFi OFF: 100-500ms, 15-30mA. 
+
+   _Fast sensors are preferred._
+
+3. Wake time, sending data on ESP-Now with WiFi ON: 60ms, 70-150mA. 
+
+   _Fast, thanks to ESP-Now._
 
 From the above typical values, it is realized the major energy consumption is in the Deep Sleep mode why it is important to use ESP boards with low deep sleep currents. The LOLIN D1 Mini Pro V2.0.0 is the standard ESP board with the longest battery lifetime I have tested.
 
