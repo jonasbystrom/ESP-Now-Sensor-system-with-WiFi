@@ -18,7 +18,7 @@ You can follow these steps to build a working system.
   - Connect a Temp sensor to the ESP board.
     - Either use a SHT30 or DS18B20 sensor with provided code, or add your own code for any other sensor type. 
        
-  _As a first test you may skip these HW changes and just run an unmodified sensor with dummy temp data and with "manual" resets emulating a wake. You can also comment out the deep sleep code and just enter in a "delay(1000 * 10); ESP.restart();" for a 10 secs delay between restarts and readings. This is of course only for test as it will still consume lots of energy._
+  _As a first test you may skip these HW changes and just run without a temp sensor but send dummy temp data and with "manual" resets emulating a wake from deep sleep. You can also comment out the deep sleep code and just add a "delay(1000 * 10); ESP.restart();" for a 10 secs delay between restarts and readings. This is of course only for test as it will still consume lots of energy._
 
 ## Gateway
 - Program 1 ESP8266 or ESP32 with the sketch in espnow_gateway. Use ARDUINO IDE.
