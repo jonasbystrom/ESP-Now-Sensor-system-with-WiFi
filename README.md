@@ -16,9 +16,6 @@ Low power battery operated Sensors based on ESP8266 or ESP32, sending sensor dat
 - Code template/demonstrator for ESP8266 and ESP32 Sensor node (sending on ESP-NOW)
 - Code template/demonstrator for ESP8266 and ESP32 Gateway (receiving on ESP-NOW and providing a simple web server over WiFi),
 
-## Later to be added
-- System overview sketch
-
 ## Life time
 Typical life time performance of a Sensor with ESP8266 LOLIN D1 Mini Pro V2.0.0 and temp sensor:
 - 6+ months using a 1200mAh LiPo battery and SHT30 temp and humid sensor
@@ -73,6 +70,8 @@ WiFi and ESP-Now can be activated and operating at the same time. This allows on
 
 
 ## System summary
+
+![](https://github.com/jonasbystrom/ESP-Now-Sensor-system-with-WiFi/blob/main/img/ESP-Now%20System.png)
 
 A system comprise of up to 20 low power sensors and 1 gateway. Each sensor sends a unicast message every 5 minutes to the MAC-adress of the gateway. The gateway receives the messages and can process and send further over WiFi to any local or Internet service. The gateway can receive messages from sensors (on ESP-Now) and communicate over WiFi at the same time without any missed communications. Gateway connected to Blynk to display and monitor sensors is a good example which works very well.
 
