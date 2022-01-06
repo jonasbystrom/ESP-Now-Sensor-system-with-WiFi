@@ -23,6 +23,9 @@
  * You can add other Internet services like MQTT, Blynk, ThingSpeak etc. (I have been running this for 1.5+ years with 
  * those services.) 
  * 
+ * AUTHOR:
+ * Jonas Byström, https://github.com/jonasbystrom
+ *
  * CREDITS:
  * Code related to ESP-Now is partly based on code from:
  *  - Anthony Elder @ https://github.com/HarringayMakerSpace/ESP-Now/blob/master/espnow-sensor-bme280/espnow-sensor-bme280.ino
