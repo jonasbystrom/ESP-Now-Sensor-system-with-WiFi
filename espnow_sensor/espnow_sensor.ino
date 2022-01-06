@@ -33,6 +33,8 @@
 //  (Generally, SHT30 and DS18B20 temp sensors perform well and decently fast. DHT11/21/22 are slower 
 //  and less reliant in my testes. I dont use them in real life.)
 //
+//  AUTHOR:
+//  Jonas Byström, https://github.com/jonasbystrom
 //
 //  CREDITS:
 //  This code is based on code from:
